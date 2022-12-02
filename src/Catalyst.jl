@@ -26,7 +26,8 @@ import ModelingToolkit: check_variables, check_parameters, _iszero, _merge, chec
                         get_unit
 
 import Base: (==), hash, size, getindex, setindex, isless, Sort.defalg, length, show
-import MacroTools, Graphs
+import MacroTools
+import Graphs, Graphs.DiGraph, Graphs.SimpleGraph, Graphs.vertices, Graphs.edges
 import DataStructures: OrderedDict, OrderedSet
 import Parameters: @with_kw_noshow
 
@@ -85,5 +86,9 @@ include("latexify_recipes.jl")
 # for making and saving graphs
 include("graphs.jl")
 export Graph, savegraph, complexgraph
+
+# for spatial simulations.
+include("spatial_reaction_network.jl")
+export LatticeReactionSystem, SpatialReaction, diffusion_reaction
 
 end # module
