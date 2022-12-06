@@ -39,6 +39,9 @@ using SafeTestsets
     # Tests related to PDESystems
     @time @safetestset "PDE Systems" begin include("pdes.jl") end
 
+    # Tests related to LatticeReactionSystems
+    @time @safetestset "PDE Systems" begin include("lattice_reaction_systems.jl") end
+
     # Miscellaneous tests
     #@time @safetestset "Basic Plotting" begin include("plotting.jl") end
     @time @safetestset "Latexify" begin include("latexify.jl") end
